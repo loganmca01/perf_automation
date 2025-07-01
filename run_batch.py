@@ -78,6 +78,7 @@ def run_experiment(exp_str, dir_str):
     if result.returncode == 0:
         print("success")
         print(result.stdout)
+        print(result.stderr)
     else:
         print("error executing command")
         log_error("error executing command")
