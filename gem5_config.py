@@ -89,8 +89,6 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-run_sim()
-
 def build_cache():
 
     sizes = args.cache.split(":")
@@ -272,8 +270,6 @@ def run_sim():
     print("test3")
     simulator.run()
         
-        
-if __name__=="__main__":
-    main()
-        
+
+run_sim()
         
