@@ -240,8 +240,13 @@ def handle_workend():
     
     
 def run_sim():
+    
+    print("test1")
+    
     if (args.workload == "boot-exit"):
         board = build_boot_exit_board()
+        
+        print("test2")
     
         simulator = Simulator(
             board = board,
@@ -253,6 +258,8 @@ def run_sim():
     else:
         board = build_parsec_board()
         
+        print("test2")
+        
         simulator = Simulator(
             board=board,
             on_exit_event={
@@ -261,6 +268,7 @@ def run_sim():
             },
         )
         
+    print("test3")
     simulator.run()
         
         
