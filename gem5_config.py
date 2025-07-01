@@ -44,6 +44,8 @@ workload_choices = [
     "canneal",
 ]
 
+print("testing")
+
 def main():
     print("test0")
     
