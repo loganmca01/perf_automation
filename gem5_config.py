@@ -45,6 +45,8 @@ workload_choices = [
 ]
 
 def main():
+    print("test0")
+    
     parser = argparse.ArgumentParser()
 
     parser.add_argument(

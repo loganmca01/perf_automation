@@ -173,7 +173,7 @@ def log_experiment(exp_str, time_str, args):
 
     with open("/home/mcallisl/perf_automation/log-dev1.txt", "a") as f:
         
-        f.write("-----------------------------------------------------------------------------------------------")
+        f.write("-----------------------------------------------------------------------------------------------\n")
         f.write(time_str)
         f.write("\n\n")
         
