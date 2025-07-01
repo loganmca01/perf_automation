@@ -50,7 +50,7 @@ def setup_experiment(exp):
         time.sleep(2) # make sure experiments don't have same timestamp
     
         s += " &> "
-        d = "/home/mcallisl/perf_automation/raw_output_files/"
+        d = "/home/mcallisl/perf_automation/output_files/"
         for tmp in args:
             d += tmp + "-"
 
