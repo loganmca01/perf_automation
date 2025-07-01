@@ -44,7 +44,7 @@ workload_choices = [
     "canneal",
 ]
 
-print("test0")
+processor = None
 
 parser = argparse.ArgumentParser()
 
@@ -131,6 +131,8 @@ def build_mem():
         
 def build_boot_exit_board():
     
+    global processor
+    
     processor = SimpleProcessor(
         cpu_type=CPUTypes[args.cpu],
         isa=ISA[args.isa],
@@ -175,6 +177,8 @@ def build_boot_exit_board():
     
 
 def build_parsec_board():
+    
+    global processor
     
     processor = SimpleSwitchableProcessor(
         starting_core_type=CPUTypes.KVM,
