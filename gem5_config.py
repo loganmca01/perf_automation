@@ -44,50 +44,51 @@ workload_choices = [
     "canneal",
 ]
 
-parser = argparse.ArgumentParser()
+def main():
+    parser = argparse.ArgumentParser()
 
-parser.add_argument(
-    "--isa",
-    type=str,
-    required=True,
-    choices=isa_choices,
-)
+    parser.add_argument(
+        "--isa",
+        type=str,
+        required=True,
+        choices=isa_choices,
+    )
 
-parser.add_argument(
-    "--cpu",
-    type=str,
-    required=True,
-    choices=cpu_choices,
-)
+    parser.add_argument(
+        "--cpu",
+        type=str,
+        required=True,
+        choices=cpu_choices,
+    )
 
-parser.add_argument(
-    "--mem",
-    type=str,
-    required=True,
-)
+    parser.add_argument(
+        "--mem",
+        type=str,
+        required=True,
+    )
 
-parser.add_argument(
-    "--cache",
-    type=str,
-    required=True,
-)
+    parser.add_argument(
+        "--cache",
+        type=str,
+        required=True,
+    )
 
-parser.add_argument(
-    "--cores",
-    type=int,
-    required=True,
-)
+    parser.add_argument(
+        "--cores",
+        type=int,
+        required=True,
+    )
 
-parser.add_argument(
-    "--workload",
-    type=str,
-    required=True,
-    choices=workload_choices,
-)
+    parser.add_argument(
+        "--workload",
+        type=str,
+        required=True,
+        choices=workload_choices,
+    )
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-run_sim()
+    run_sim()
 
 def build_cache():
 
@@ -263,7 +264,7 @@ def run_sim():
     simulator.run()
         
         
-        
-        
+if __name__=="__main__":
+    main()
         
         
