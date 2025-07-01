@@ -73,7 +73,7 @@ def setup_experiment(exp):
     
 def run_experiment(exp_str, dir_str):
     
-    result = subprocess.run(s, shell=True, capture_output=True, text=True)
+    result = subprocess.run(exp_str, shell=True, capture_output=True, text=True)
     
     if result.returncode == 0:
         print("success")
