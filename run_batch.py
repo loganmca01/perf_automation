@@ -25,6 +25,8 @@ def main():
         
 def setup_experiment(exp):
     
+    workload = args[5]
+    
     num_parallel = 10
     
     args = exp.split(" ")
@@ -32,21 +34,23 @@ def setup_experiment(exp):
     
     recorded_time = ""
     
+    base = ""
+    
+    base += "taskset -c 0-9,11-29,31-39 perf stat -M  "
+    base += args[6]
+
+    base += " /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py"
+    
+    base += " --isa " + args[0]
+    base += " --cpu " + args[1]
+    base += " --mem " + args[2]
+    base += " --cache " + args[3]
+    base += " --cores " + args[4]
+    base += " --workload " + args[5]
+    
     for i in range(0, num_parallel):
         
-        s = ""
-        
-        s += "taskset -c 0-9,11-29,31-39 perf stat -M  "
-        s += args[6]
-    
-        s += " /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py"
-        
-        s += " --isa " + args[0]
-        s += " --cpu " + args[1]
-        s += " --mem " + args[2]
-        s += " --cache " + args[3]
-        s += " --cores " + args[4]
-        s += " --workload " + args[5]
+        s = base
     
         timestr = time.strftime("%Y-%m-%d-%H-%M-%S")
         
@@ -61,7 +65,7 @@ def setup_experiment(exp):
             d += tmp + "-"
 
         d = d[:-1]
-        s += d + "/" + timestr + "-dev1"
+        s += d + "/" + timestr + "-" + dev_name
 
         s += " & "
         
@@ -75,9 +79,9 @@ def setup_experiment(exp):
     
     log_experiment(exp_str, recorded_time, args)
     
-    run_experiment(exp_str, d)
+    run_experiment(exp_str, d, workload)
     
-def run_experiment(exp_str, dir_str):
+def run_experiment(exp_str, dir_str, workload_str):
     
     result = subprocess.run(exp_str, shell=True, capture_output=True, text=True)
     
@@ -104,14 +108,14 @@ def run_experiment(exp_str, dir_str):
         print(cleanup.stderr)
         exit(1)
         
-    extract_data(dir_str)
+    extract_data(dir_str, workload_str)
         
     
-def extract_data(dir_str):
+def extract_data(dir_str, workload_str):
     
     metrics,keys = process_directory(dir_str)
     
-    output_str = "/home/mcallisl/perf_automation/extracted_csvs/" + dir_str + ".csv"
+    output_str = "/home/mcallisl/perf_automation/extracted_csvs/" + workload_str + "/" + dir_str + ".csv"
     
     write_to_csv(metrics, keys, output_str)
     
