@@ -25,11 +25,14 @@ def main():
         
 def setup_experiment(exp):
     
-    workload = args[5]
     
     num_parallel = 10
     
     args = exp.split(" ")
+    
+    workload = args[5]
+    
+    
     exp_str = ""
     
     recorded_time = ""
