@@ -10,6 +10,8 @@ workload_names = [
     "tma_core_bound_group",
 ]
 
+create_index = "CREATE TABLE "
+
 try:
     with sqlite3.connect(":memory:") as conn:
         print(f"Opened SQLite database with version {sqlite3.sqlite_version} successfully.")

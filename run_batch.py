@@ -3,6 +3,7 @@ import time
 import subprocess
 import os
 import socket
+import re
 
 dev_name = None
 
