@@ -2,9 +2,15 @@ import sys
 import time
 import subprocess
 import os
+import socket
 
+dev_name = None
 
 def main():
+    global dev_name
+    dev_name = socket.gethostname()
+    print(dev_name)
+    
     with open(sys.argv[1], "r") as f:
         contents = f.read()
         f.close()
@@ -67,7 +73,7 @@ def setup_experiment(exp):
         
     exp_str += "wait"
     
-    log_experiment(s, recorded_time, args)
+    log_experiment(exp_str, recorded_time, args)
     
     run_experiment(exp_str, d)
     
@@ -103,7 +109,7 @@ def run_experiment(exp_str, dir_str):
     
 def extract_data(dir_str):
     
-    metrics,keys = process_director(dir_str)
+    metrics,keys = process_directory(dir_str)
     
     output_str = "/home/mcallisl/perf_automation/extracted_csvs/" + dir_str + ".csv"
     
