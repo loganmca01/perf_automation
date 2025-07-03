@@ -64,12 +64,12 @@ def setup_experiment(exp):
         time.sleep(2) # make sure experiments don't have same timestamp
     
         s += " &> "
-        d = "/home/mcallisl/perf_automation/output_files/"
+        d = ""
         for tmp in args:
             d += tmp + "-"
 
         d = d[:-1]
-        s += d + "/" + timestr + "-" + dev_name
+        s += "/home/mcallisl/perf_automation/output_files/" + d + "/" + timestr + "-" + dev_name
 
         s += " & "
         
@@ -177,15 +177,19 @@ def write_to_csv(metrics_dict, all_keys, output_file):
     
 def log_error(err_msg):
     
-    with open("/home/mcallisl/perf_automation/log-dev1.txt", "a") as f:
+    f = "/home/mcallisl/perf_automation/log-" + dev_name + ".txt"
+    
+    with open(f, "a") as f:
         f.write(err_msg)
         f.write("\n\n\n")
         f.close()
     
 
 def log_experiment(exp_str, time_str, args):
+    
+    f = "/home/mcallisl/perf_automation/log-" + dev_name + ".txt"
 
-    with open("/home/mcallisl/perf_automation/log-dev1.txt", "a") as f:
+    with open(f, "a") as f:
         
         f.write("-----------------------------------------------------------------------------------------------\n")
         f.write(time_str)

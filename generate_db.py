@@ -10,7 +10,12 @@ workload_names = [
     "tma_core_bound_group",
 ]
 
-create_index = "CREATE TABLE "
+create_index = 
+"CREATE TABLE index (
+    datetime INTEGER PRIMARY KEY
+    machine TEXT PRIMARY KEY
+    
+)"
 
 try:
     with sqlite3.connect(":memory:") as conn:
