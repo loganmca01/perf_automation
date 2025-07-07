@@ -86,11 +86,13 @@ def setup_experiment(exp):
         
     exp_str += "wait"
     
+    filename = d + "-" + dev_name "-" + recorded_time + ".csv"
+    
     log_experiment(exp_str, recorded_time, args)
     
-    run_experiment(exp_str, full_dir, workload)
+    run_experiment(exp_str, full_dir, filename)
     
-def run_experiment(exp_str, dir_str, workload_str):
+def run_experiment(exp_str, dir_str, filename):
     
     result = subprocess.run(exp_str, shell=True, capture_output=True, text=True)
     
@@ -117,16 +119,14 @@ def run_experiment(exp_str, dir_str, workload_str):
         print(cleanup.stderr)
         exit(1)
         
-    extract_data(dir_str, workload_str)
+    extract_data(dir_str, filename)
         
     
-def extract_data(dir_str, workload_str):
+def extract_data(dir_str, filename):
     
     metrics,keys = process_directory(dir_str)
     
-    output_str = "/home/mcallisl/perf_automation/extracted_csvs/" + workload_str + "/" + dir_str + ".csv"
-    
-    write_to_csv(metrics, keys, output_str)
+    write_to_csv(metrics, keys, filename)
     
 
 def process_directory(directory):
