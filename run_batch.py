@@ -86,7 +86,7 @@ def setup_experiment(exp):
         
     exp_str += "wait"
     
-    filename = d + "-" + dev_name "-" + recorded_time + ".csv"
+    filename = d + "-" + dev_name + "-" + recorded_time + ".csv"
     
     log_experiment(exp_str, recorded_time, args)
     
