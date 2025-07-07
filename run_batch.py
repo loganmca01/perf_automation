@@ -52,6 +52,18 @@ def setup_experiment(exp):
     base += " --cores " + args[4]
     base += " --workload " + args[5]
     
+    d = ""
+    for tmp in args:
+        d += tmp + "-"
+
+    d = d[:-1]
+    
+    full_dir = "/home/mcallisl/perf_automation/output_files/" + d
+    
+    if not os.path.exists(full_dir):
+        os.makedirs(full_dir)
+        #print(os.path.exists(full_dir))
+    
     for i in range(0, num_parallel):
         
         s = base
@@ -64,20 +76,13 @@ def setup_experiment(exp):
         time.sleep(2) # make sure experiments don't have same timestamp
     
         s += " &> "
-        d = ""
-        for tmp in args:
-            d += tmp + "-"
-
-        d = d[:-1]
+        
         s += "/home/mcallisl/perf_automation/output_files/" + d + "/" + timestr + "-" + dev_name
 
         s += " & "
         
         exp_str += s
         
-        if not os.path.exists(d):
-            os.makedirs(d)
-            print(os.path.exists(d))
         
     exp_str += "wait"
     
