@@ -88,7 +88,7 @@ def setup_experiment(exp):
     
     log_experiment(exp_str, recorded_time, args)
     
-    run_experiment(exp_str, d, workload)
+    run_experiment(exp_str, full_dir, workload)
     
 def run_experiment(exp_str, dir_str, workload_str):
     
