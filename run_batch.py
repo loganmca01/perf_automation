@@ -169,7 +169,10 @@ def extract_metrics_from_file(filepath):
 
 
 def write_to_csv(metrics_dict, all_keys, output_file):
-    with open(output_file, 'w', newline='') as csvfile:
+    
+    full_output = "/home/mcallisl/perf_automation/extracted_csvs/" + output_file
+    
+    with open(full_output, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         header = ['Metric'] + list(metrics_dict.keys())
         writer.writerow(header)
