@@ -194,7 +194,7 @@ def write_to_csv(metrics_dict, all_keys, output_file):
     
     with open(full_output, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        header = ['Metric'] + list(metrics_dict.keys())
+        header = ['datetime'] + list(metrics_dict.keys())
         writer.writerow(header)
 
         for key in all_keys:
