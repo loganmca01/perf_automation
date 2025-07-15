@@ -1,0 +1,25 @@
+warn: Resource x86-linux-kernel-4.19.83 is not compatible with gem5 version 25.0.0.0.
+warn: Resource x86-parsec is not compatible with gem5 version 25.0.0.0.
+warn: Resource x86-linux-kernel-4.19.83 is not compatible with gem5 version 25.0.0.0.
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes':
+
+        88,582,456      CPU_CLK_UNHALTED.REF_XCLK        #     36.9 %  tma_frontend_bound     
+                                                  #      8.7 %  tma_bad_speculation    
+                                                  #     29.7 %  tma_retiring           
+                                                  #     24.8 %  tma_backend_bound        (48.26%)
+        80,450,576      IDQ.MS_UOPS                                                             (49.96%)
+     3,343,163,525      IDQ_UOPS_NOT_DELIVERED.CORE                                             (51.98%)
+        90,189,406      INT_MISC.RECOVERY_CYCLES_ANY                                            (51.22%)
+        87,505,127      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (51.74%)
+     2,280,391,704      CPU_CLK_UNHALTED.THREAD                                                 (50.04%)
+     2,691,518,759      UOPS_RETIRED.RETIRE_SLOTS                                               (48.02%)
+     3,297,104,283      UOPS_ISSUED.ANY                                                         (48.78%)
+
+     288.490783579 seconds time elapsed
+
+       0.692899000 seconds user
+       0.263906000 seconds sys
+
+
