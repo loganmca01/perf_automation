@@ -1,0 +1,22 @@
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit':
+
+        86,549,484      CPU_CLK_UNHALTED.REF_XCLK        #     21.6 %  tma_frontend_bound     
+                                                  #      6.1 %  tma_bad_speculation    
+                                                  #     37.9 %  tma_retiring           
+                                                  #     34.4 %  tma_backend_bound        (50.38%)
+       104,939,652      IDQ.MS_UOPS                                                             (51.04%)
+     2,310,395,353      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.62%)
+        72,242,552      INT_MISC.RECOVERY_CYCLES_ANY                                            (49.88%)
+        86,755,043      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (49.62%)
+     2,667,310,650      CPU_CLK_UNHALTED.THREAD                                                 (48.96%)
+     4,052,889,162      UOPS_RETIRED.RETIRE_SLOTS                                               (49.38%)
+     4,557,505,581      UOPS_ISSUED.ANY                                                         (50.12%)
+
+      52.129125993 seconds time elapsed
+
+       0.752785000 seconds user
+       0.128516000 seconds sys
+
+

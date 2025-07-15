@@ -187,3 +187,109 @@ perf: TopdownL1
 -----------------------------------------------------------------------------------------------
 
 
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+2025-07-15-14-42-59
+
+experiment commandtaskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/1 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/2 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/3 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/4 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/5 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/6 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/7 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/8 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/9 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes &> /home/mcallisl/perf_automation/output_files/X86-O3-2GiB-32KiB:256KiB-4-blackscholes-TopdownL1/2025-07-15-14-42-59-turing302/10 & wait
+
+isa: X86
+
+cpu: O3
+
+mem: 2GiB
+
+cache: 32KiB:256KiB
+
+cores: 4
+
+work: blackscholes
+
+perf: TopdownL1
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+2025-07-15-14-53-09
+
+experiment commandtaskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/1 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/2 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/3 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/4 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/5 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/6 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/7 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/8 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/9 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/RISCV-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-53-09-turing302/10 & wait
+
+isa: RISCV
+
+cpu: O3
+
+mem: 2GiB
+
+cache: 128KiB:1024KiB
+
+cores: 4
+
+work: boot-exit
+
+perf: TopdownL1
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+2025-07-15-14-55-58
+
+experiment commandtaskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/1 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/2 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/3 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/4 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/5 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/6 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/7 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/8 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/9 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-14-55-58-turing302/10 & wait
+
+isa: ARM
+
+cpu: O3
+
+mem: 2GiB
+
+cache: 128KiB:1024KiB
+
+cores: 4
+
+work: boot-exit
+
+perf: TopdownL1
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+2025-07-15-16-30-15
+
+experiment commandtaskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/0 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/1 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/2 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/3 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/4 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/5 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/6 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/7 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/8 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-30-15-turing302/9 & wait
+
+isa: ARM
+
+cpu: O3
+
+mem: 2GiB
+
+cache: 128KiB:1024KiB
+
+cores: 4
+
+work: boot-exit
+
+perf: TopdownL1
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+2025-07-15-16-38-24
+
+experiment commandtaskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/0 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/1 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/2 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/3 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/4 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/5 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/6 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/7 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/8 & taskset -c 0-9,11-29,31-39 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit &> /home/mcallisl/perf_automation/output_files/ARM-O3-2GiB-128KiB:1024KiB-4-boot-exit-TopdownL1/2025-07-15-16-38-24-turing302/9 & wait
+
+isa: ARM
+
+cpu: O3
+
+mem: 2GiB
+
+cache: 128KiB:1024KiB
+
+cores: 4
+
+work: boot-exit
+
+perf: TopdownL1
+-----------------------------------------------------------------------------------------------
+
+

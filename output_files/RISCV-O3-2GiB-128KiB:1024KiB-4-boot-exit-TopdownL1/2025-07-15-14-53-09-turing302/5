@@ -1,0 +1,52 @@
+warn: Resource riscv-bootloader-opensbi-1.3.1 is not compatible with gem5 version 25.0.0.0.
+warn: Resource riscv-bootloader-opensbi-1.3.1 is not compatible with gem5 version 25.0.0.0.
+Global frequency set at 1000000000000 ticks per second
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+      0: board.platform.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+src/dev/serial/terminal.cc:174: warn: Sockets disabled, not accepting terminal connections
+src/arch/riscv/isa.cc:319: info: RVV enabled, VLEN = 256 bits, ELEN = 64 bits
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/arch/riscv/isa.cc:319: info: RVV enabled, VLEN = 256 bits, ELEN = 64 bits
+src/arch/riscv/isa.cc:319: info: RVV enabled, VLEN = 256 bits, ELEN = 64 bits
+src/arch/riscv/isa.cc:319: info: RVV enabled, VLEN = 256 bits, ELEN = 64 bits
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+src/arch/riscv/linux/fs_workload.cc:162: info: Loaded bootloader '/home/mcallisl/.cache/gem5/riscv-bootloader-opensbi-1.3.1' at 0x0
+src/arch/riscv/linux/fs_workload.cc:180: info: Loaded kernel '/home/mcallisl/.cache/gem5/riscv-linux-6.8.12-kernel' at 0x80200000
+src/arch/riscv/linux/fs_workload.cc:199: info: Loaded DTB 'm5out/device.dtb' at 0x87e00000
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.0.0.0
+gem5 compiled Jul  9 2025 13:14:56
+gem5 started Jul 15 2025 14:53:30
+gem5 executing on turing302, pid 159385
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit
+
+info: Standard input is not a terminal, disabling listeners.
+info: Using default config
+test3
+src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit':
+
+     2,755,081,097      CPU_CLK_UNHALTED.REF_XCLK        #     16.0 %  tma_frontend_bound     
+                                                  #      4.1 %  tma_bad_speculation    
+                                                  #     41.0 %  tma_retiring           
+                                                  #     38.9 %  tma_backend_bound        (50.02%)
+     3,830,093,259      IDQ.MS_UOPS                                                             (50.04%)
+    52,685,776,999      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.02%)
+     1,023,481,145      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.03%)
+     2,752,423,934      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.01%)
+    82,524,563,177      CPU_CLK_UNHALTED.THREAD                                                 (50.00%)
+   135,290,088,996      UOPS_RETIRED.RETIRE_SLOTS                                               (50.01%)
+   146,841,278,248      UOPS_ISSUED.ANY                                                         (50.00%)
+
+     117.932353448 seconds time elapsed
+
+      25.974539000 seconds user
+       1.626395000 seconds sys
+
+

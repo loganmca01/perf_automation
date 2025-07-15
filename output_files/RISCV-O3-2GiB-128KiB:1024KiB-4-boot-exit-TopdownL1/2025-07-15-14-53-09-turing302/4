@@ -1,0 +1,25 @@
+warn: Resource riscv-bootloader-opensbi-1.3.1 is not compatible with gem5 version 25.0.0.0.
+warn: Resource riscv-bootloader-opensbi-1.3.1 is not compatible with gem5 version 25.0.0.0.
+Global frequency set at 1000000000000 ticks per second
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa RISCV --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit':
+
+     1,610,187,244      CPU_CLK_UNHALTED.REF_XCLK        #      7.7 %  tma_frontend_bound     
+                                                  #      4.5 %  tma_bad_speculation    
+                                                  #     44.7 %  tma_retiring           
+                                                  #     43.0 %  tma_backend_bound        (49.99%)
+     1,772,209,265      IDQ.MS_UOPS                                                             (50.04%)
+    14,940,842,361      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.03%)
+       688,433,485      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.07%)
+     1,608,294,922      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.03%)
+    48,260,202,212      CPU_CLK_UNHALTED.THREAD                                                 (49.98%)
+    86,294,845,305      UOPS_RETIRED.RETIRE_SLOTS                                               (49.99%)
+    93,561,146,553      UOPS_ISSUED.ANY                                                         (49.96%)
+
+     117.921239773 seconds time elapsed
+
+      14.872601000 seconds user
+       1.138082000 seconds sys
+
+
