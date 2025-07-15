@@ -160,6 +160,7 @@ def process_directory(directory, times):
 def extract_metrics_from_file(filepath, times):
     
     global time_iter
+    global dev_name
     
     metrics = {}
     metric_pattern = re.compile(r'#\s+([\d\.]+)\s+%\s+(\S+)')
