@@ -66,8 +66,6 @@ def setup_experiment(exp):
     
     times = []
     
-    global time_iter
-    
     for i in range(0, num_parallel):
         
         s = base
@@ -97,10 +95,13 @@ def setup_experiment(exp):
     
     filename = d + "-" + dev_name + "-" + times[0] + ".csv"
     
+    print(times)
+    
     log_experiment(exp_str, times, args)
     
     run_experiment(exp_str, full_dir, filename, times)
     
+    global time_iter
     time_iter = 0
     
 def run_experiment(exp_str, dir_str, filename, times):

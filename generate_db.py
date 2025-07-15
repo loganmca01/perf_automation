@@ -1,4 +1,6 @@
 import sqlite3
+import csv
+import pandas
 
 workload_names = [
     "TopdownL1",
@@ -42,6 +44,13 @@ CREATE TABLE topdownl1 (
 """
 
 
+def import_file(filename, cursor):
+    
+    df = pandas.read_csv(filename)
+    
+    
+    
+
 try:
     with sqlite3.connect(":memory:") as conn:
         print(f"Opened SQLite database with version {sqlite3.sqlite_version} successfully.")
@@ -56,7 +65,10 @@ try:
         
         for filename in os.listdir("/home/mcallisl/perf_automation/extracted_csvs/"):
             
+            import_file(filename, cursor)
+        
             
+        
         
         
 
