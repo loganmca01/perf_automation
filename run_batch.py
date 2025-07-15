@@ -95,8 +95,8 @@ def setup_experiment(exp):
     
     filename = d + "-" + dev_name + "-" + times[0] + ".csv"
     
-    print(times)
-    print(full_dir)
+    #print(times)
+    #print(full_dir)
     
     log_experiment(exp_str, times, args)
     
@@ -147,9 +147,10 @@ def process_directory(directory, times):
     all_keys = set()
 
     for filename in sorted(os.listdir(directory)):
+        
         full_path = os.path.join(directory, filename)
         if os.path.isfile(full_path):
-            metrics = extract_metrics_from_file(full_path)
+            metrics = extract_metrics_from_file(full_path, times)
             all_metrics[filename] = metrics
             all_keys.update(metrics.keys())
 
