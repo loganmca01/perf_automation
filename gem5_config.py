@@ -37,7 +37,7 @@ cpu_choices = [
 ]
 
 workload_choices = [
-    "boot-exit",
+    "boot_exit",
     "blackscholes",
     "dedup",
     "fluidanimate",
@@ -244,7 +244,7 @@ def handle_workend():
     
 def run_sim():
     
-    if (args.workload == "boot-exit"):
+    if (args.workload == "boot_exit"):
         board = build_boot_exit_board()
         
         simulator = Simulator(
