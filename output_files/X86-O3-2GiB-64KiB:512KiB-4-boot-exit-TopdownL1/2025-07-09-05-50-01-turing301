@@ -32,3 +32,39 @@ src/cpu/o3/fetch.cc:610: warn: Address 0xffffffc0 is outside of physical memory,
 src/cpu/o3/fetch.cc:610: warn: Address 0xffffffc0 is outside of physical memory, stopping fetch
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'wbinvd' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'sgdt_Ms' unimplemented
+src/cpu/o3/fetch.cc:610: warn: Address 0xffffffc0 is outside of physical memory, stopping fetch
+src/cpu/o3/fetch.cc:610: warn: Address 0xffffffc0 is outside of physical memory, stopping fetch
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'wbinvd' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'sgdt_Ms' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fninit' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fninit' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fninit' unimplemented
+src/arch/x86/interrupts.cc:530: hack: Assuming logical destinations are 1 << id.
+src/dev/pci/host.cc:171: warn: 00:1f.1: Write to config space on non-existent PCI device
+src/dev/pci/host.cc:171: warn: 00:1f.1: Write to config space on non-existent PCI device
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+src/dev/x86/pc.cc:117: warn: Don't know what interrupt to clear for console.
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload boot-exit':
+
+ 2,872,635,532,148      CPU_CLK_UNHALTED.REF_XCLK        #     44.7 %  tma_frontend_bound     
+                                                  #      4.7 %  tma_bad_speculation    
+                                                  #     31.5 %  tma_retiring           
+                                                  #     19.1 %  tma_backend_bound        (50.00%)
+ 6,155,302,016,388      IDQ.MS_UOPS                                                             (50.00%)
+154,058,271,068,593      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+ 1,447,842,339,784      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+ 2,871,575,195,956      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+86,126,522,287,695      CPU_CLK_UNHALTED.THREAD                                                 (50.00%)
+108,331,592,901,856      UOPS_RETIRED.RETIRE_SLOTS                                               (50.00%)
+121,720,238,677,509      UOPS_ISSUED.ANY                                                         (50.00%)
+
+   28946.269573458 seconds time elapsed
+
+   28635.787798000 seconds user
+       2.288545000 seconds sys
+
+

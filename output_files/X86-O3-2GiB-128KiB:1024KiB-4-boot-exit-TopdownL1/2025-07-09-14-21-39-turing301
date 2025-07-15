@@ -14,9 +14,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 25.0.0.0
 gem5 compiled Jul  8 2025 20:16:02
-gem5 started Jul  9 2025 05:50:20
-gem5 executing on turing301, pid 95556
-command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload boot-exit
+gem5 started Jul  9 2025 14:21:47
+gem5 executing on turing301, pid 179820
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit
 
 info: Standard input is not a terminal, disabling listeners.
 info: Using default config
@@ -48,23 +48,23 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimpl
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 
- Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload boot-exit':
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot-exit':
 
- 2,944,660,174,086      CPU_CLK_UNHALTED.REF_XCLK        #     44.8 %  tma_frontend_bound     
-                                                  #      4.4 %  tma_bad_speculation    
-                                                  #     30.8 %  tma_retiring           
-                                                  #     19.9 %  tma_backend_bound        (50.00%)
- 6,183,514,041,696      IDQ.MS_UOPS                                                             (50.00%)
-157,517,835,296,626      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
- 1,367,807,491,536      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
- 2,940,215,928,300      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
-87,900,146,723,282      CPU_CLK_UNHALTED.THREAD                                                 (50.00%)
-108,369,420,377,538      UOPS_RETIRED.RETIRE_SLOTS                                               (50.00%)
-121,031,274,500,130      UOPS_ISSUED.ANY                                                         (50.00%)
+ 2,790,976,347,249      CPU_CLK_UNHALTED.REF_XCLK        #     43.8 %  tma_frontend_bound     
+                                                  #      4.7 %  tma_bad_speculation    
+                                                  #     31.2 %  tma_retiring           
+                                                  #     20.4 %  tma_backend_bound        (50.00%)
+ 5,904,449,718,692      IDQ.MS_UOPS                                                             (50.00%)
+146,517,560,364,404      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+ 1,355,723,808,278      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+ 2,790,340,862,876      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+83,723,339,572,285      CPU_CLK_UNHALTED.THREAD                                                 (50.00%)
+104,400,858,762,378      UOPS_RETIRED.RETIRE_SLOTS                                               (50.00%)
+117,357,361,748,417      UOPS_ISSUED.ANY                                                         (50.00%)
 
-   30363.630740367 seconds time elapsed
+   28191.606160244 seconds time elapsed
 
-   29987.904385000 seconds user
-       2.383542000 seconds sys
+   27813.215790000 seconds user
+       2.263138000 seconds sys
 
 
