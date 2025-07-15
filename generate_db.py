@@ -1,6 +1,6 @@
 import sqlite3
 import csv
-import pandas
+import os
 
 workload_names = [
     "TopdownL1",
@@ -43,10 +43,21 @@ CREATE TABLE topdownl1 (
 );
 """
 
+ISA = 0
+CPU = 1
+MEM = 2
+CACHE = 3
+CORES = 4
+
+
 
 def import_file(filename, cursor):
     
-    df = pandas.read_csv(filename)
+    no_ext = filename.split(".")[0]
+    info = no_ext.split("-")
+    
+    
+
     
     
     
@@ -63,7 +74,7 @@ try:
         test = cursor.execute("SELECT name FROM sqlite_master")
         print(test.fetchall())
         
-        for filename in os.listdir("/home/mcallisl/perf_automation/extracted_csvs/"):
+        for filename in os.listdir("./extracted_csvs/"):
             
             import_file(filename, cursor)
         
