@@ -210,7 +210,7 @@ def log_error(err_msg):
         f.close()
     
 
-def log_experiment(exp_str, time_str, args):
+def log_experiment(exp_str, times, args):
     
     f = "/home/mcallisl/perf_automation/log-" + dev_name + ".txt"
 
