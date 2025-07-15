@@ -7,6 +7,7 @@ import re
 import csv
 
 dev_name = None
+time_iter = 0
 
 def main():
     global dev_name
@@ -34,11 +35,8 @@ def setup_experiment(exp):
     
     workload = args[5]
     
-    
     exp_str = ""
-    
     recorded_time = ""
-    
     base = ""
     
     base += "taskset -c 0-9,11-29,31-39 perf stat -M  "
@@ -59,11 +57,16 @@ def setup_experiment(exp):
 
     d = d[:-1]
     
-    full_dir = "/home/mcallisl/perf_automation/output_files/" + d
+    base_dir = "/home/mcallisl/perf_automation/output_files/" + d
     
-    if not os.path.exists(full_dir):
-        os.makedirs(full_dir)
+    if not os.path.exists(base_dir):
+        os.makedirs(base_dir)
         #print(os.path.exists(full_dir))
+    
+    
+    times = []
+    
+    global time_iter
     
     for i in range(0, num_parallel):
         
@@ -72,13 +75,18 @@ def setup_experiment(exp):
         timestr = time.strftime("%Y-%m-%d-%H-%M-%S")
         
         if (i == 0):
-            recorded_time = timestr
+            full_dir = base_dir + "/" + timestr + "-" + dev_name
+            if not os.path.exists(full_dir):
+                os.makedirs(full_dir)
+            
+        times.append(timestr)
 
         time.sleep(2) # make sure experiments don't have same timestamp
     
         s += " &> "
         
-        s += "/home/mcallisl/perf_automation/output_files/" + d + "/" + timestr + "-" + dev_name
+        s += full_dir
+        s += "/" + str(i + 1)
 
         s += " & "
         
@@ -87,13 +95,15 @@ def setup_experiment(exp):
         
     exp_str += "wait"
     
-    filename = d + "-" + dev_name + "-" + recorded_time + ".csv"
+    filename = d + "-" + dev_name + "-" + times[0] + ".csv"
     
-    log_experiment(exp_str, recorded_time, args)
+    log_experiment(exp_str, times, args)
     
-    run_experiment(exp_str, full_dir, filename)
+    run_experiment(exp_str, full_dir, filename, times)
     
-def run_experiment(exp_str, dir_str, filename):
+    time_iter = 0
+    
+def run_experiment(exp_str, dir_str, filename, times):
     
     result = subprocess.run(exp_str, shell=True, capture_output=True, text=True)
     
@@ -120,22 +130,22 @@ def run_experiment(exp_str, dir_str, filename):
         print(cleanup.stderr)
         exit(1)
         
-    extract_data(dir_str, filename)
+    extract_data(dir_str, filename, times)
         
     
-def extract_data(dir_str, filename):
+def extract_data(dir_str, filename, times):
     
-    metrics,keys = process_directory(dir_str)
+    metrics,keys = process_directory(dir_str, times)
     
     write_to_csv(metrics, keys, filename)
     
 
-def process_directory(directory):
+def process_directory(directory, times):
     all_metrics = {}
     all_keys = set()
 
     for filename in sorted(os.listdir(directory)):
-        full_path = os.path.join(directory, filename)
+        full_path = os.path.join(directory, filename, times)
         if os.path.isfile(full_path):
             metrics = extract_metrics_from_file(full_path)
             all_metrics[filename] = metrics
@@ -144,7 +154,9 @@ def process_directory(directory):
     return all_metrics, sorted(all_keys)
     
     
-def extract_metrics_from_file(filepath):
+def extract_metrics_from_file(filepath, times):
+    
+    global time_iter
     
     metrics = {}
     metric_pattern = re.compile(r'#\s+([\d\.]+)\s+%\s+(\S+)')
@@ -165,6 +177,10 @@ def extract_metrics_from_file(filepath):
             total_match = total_uops_pattern.search(line)
             if total_match:
                 metrics['total_uops'] = total_match.group(1)
+                
+        metrics['datetime'] = times[time_iter]
+        metrics['device_name'] = dev_name
+        time_iter += 1
     return metrics
 
 
@@ -201,7 +217,7 @@ def log_experiment(exp_str, time_str, args):
     with open(f, "a") as f:
         
         f.write("-----------------------------------------------------------------------------------------------\n")
-        f.write(time_str)
+        f.write(times[0])
         f.write("\n\n")
         
         f.write("experiment command")
