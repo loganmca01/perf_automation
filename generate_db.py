@@ -55,9 +55,8 @@ def import_file(filename, cursor):
     
     no_ext = filename.split(".")[0]
     info = no_ext.split("-")
-    
-    
 
+    print(info)
     
     
     
