@@ -86,7 +86,7 @@ def setup_experiment(exp):
         s += " &> "
         
         s += full_dir
-        s += "/" + str(i + 1)
+        s += "/" + str(i)
 
         s += " & "
         

@@ -10,12 +10,37 @@ workload_names = [
     "tma_core_bound_group",
 ]
 
-create_index = 
-"CREATE TABLE index (
-    datetime INTEGER PRIMARY KEY
-    machine TEXT PRIMARY KEY
-    
-)"
+create_index = """
+CREATE TABLE experiment_index (
+    datetime INTEGER NOT NULL,
+    device_name TEXT NOT NULL,
+    isa TEXT NOT NULL,
+    cpu TEXT NOT NULL,
+    memsize TEXT NOT NULL,
+    l1 TEXT NOT NULL,
+    l2 TEXT NOT NULL,
+    l3 TEXT NOT NULL,
+    cores INTEGER NOT NULL,
+    workload TEXT NOT NULL,
+    event_group TEXT NOT NULL,    
+    PRIMARY KEY (datetime, device_name)
+);
+"""
+
+create_topdownl1 = """
+CREATE TABLE topdownl1 (
+    datetime INTEGER NOT NULL,
+    device_name TEXT NOT NULL,
+    tma_frontend_bound REAL NOT NULL,
+    tma_bad_speculation REAL NOT NULL,
+    tma_retiring REAL NOT NULL,
+    tma_backend_bound REAL NOT NULL,
+    time_elapsed REAL NOT NULL,
+    total_uops INTEGER NOT NULL,
+    PRIMARY KEY (datetime, device_name)
+);
+"""
+
 
 try:
     with sqlite3.connect(":memory:") as conn:
@@ -23,7 +48,15 @@ try:
         
         cursor = conn.cursor()
         
+        cursor.execute(create_index)
+        cursor.execute(create_topdownl1)
         
+        test = cursor.execute("SELECT name FROM sqlite_master")
+        print(test.fetchall())
+        
+        for filename in os.listdir("/home/mcallisl/perf_automation/extracted_csvs/"):
+            
+            
         
         
 
