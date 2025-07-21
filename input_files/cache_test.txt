@@ -1,5 +1,5 @@
-X86 O3 2GiB 32KiB:256KiB 4 boot-exit TopdownL1
-X86 O3 2GiB 32KiB:256KiB 4 boot-exit tma_frontend_bound_group
-X86 O3 2GiB 32KiB:256KiB 4 boot-exit tma_backend_bound_group
-X86 O3 2GiB 32KiB:256KiB 4 boot-exit tma_fetch_latency_group
-X86 O3 2GiB 32KiB:256KiB 4 boot-exit tma_memory_bound_group
+X86 O3 2GiB 32KiB:256KiB 4 boot_exit TopdownL1
+X86 O3 2GiB 32KiB:256KiB 4 boot_exit tma_frontend_bound_group
+X86 O3 2GiB 32KiB:256KiB 4 boot_exit tma_backend_bound_group
+X86 O3 2GiB 32KiB:256KiB 4 boot_exit tma_fetch_latency_group
+X86 O3 2GiB 32KiB:256KiB 4 boot_exit tma_memory_bound_group

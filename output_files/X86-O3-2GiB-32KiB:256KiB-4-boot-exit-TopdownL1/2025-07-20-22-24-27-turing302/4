@@ -1,0 +1,35 @@
+usage: gem5_config.py [-h] --isa {X86,ARM,RISCV} --cpu {TIMING,MINOR,O3} --mem
+                      MEM --cache CACHE --cores CORES --workload
+                      {boot_exit,blackscholes,dedup,fluidanimate,canneal}
+gem5_config.py: error: argument --workload: invalid choice: 'boot-exit' (choose from 'boot_exit', 'blackscholes', 'dedup', 'fluidanimate', 'canneal')
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.0.0.0
+gem5 compiled Jul  9 2025 13:14:56
+gem5 started Jul 20 2025 22:24:49
+gem5 executing on turing302, pid 164837
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload boot-exit
+
+info: Standard input is not a terminal, disabling listeners.
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload boot-exit':
+
+        65,009,407      CPU_CLK_UNHALTED.REF_XCLK        #     23.1 %  tma_frontend_bound     
+                                                  #      8.8 %  tma_bad_speculation    
+                                                  #     25.6 %  tma_retiring           
+                                                  #     42.6 %  tma_backend_bound        (49.44%)
+        56,535,854      IDQ.MS_UOPS                                                             (50.44%)
+     1,796,274,023      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.70%)
+        67,713,935      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.78%)
+        64,671,633      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.56%)
+     1,952,607,721      CPU_CLK_UNHALTED.THREAD                                                 (49.56%)
+     1,993,791,994      UOPS_RETIRED.RETIRE_SLOTS                                               (49.30%)
+     2,542,917,769      UOPS_ISSUED.ANY                                                         (49.22%)
+
+       2.294170959 seconds time elapsed
+
+       0.586099000 seconds user
+       0.067892000 seconds sys
+
+
