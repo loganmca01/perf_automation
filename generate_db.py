@@ -45,20 +45,54 @@ CREATE TABLE topdownl1 (
 
 ISA = 0
 CPU = 1
-MEM = 2
+MEMSIZE = 2
 CACHE = 3
 CORES = 4
+#TODO
 
 
-
-def import_file(filename, cursor):
+def insert_topdownl1(filename, cursor):
     
+    
+def insert_index(filename, cursor, datetime):
     no_ext = filename.split(".")[0]
     info = no_ext.split("-")
 
-    print(info)
+    index_insert = "INSERT INTO experiment_index (datetime,device_name,isa,cpu,memsize,l1,l2,l3,cores,workload,event_group) VALUES ("
+    index_insert += datetime + ","
+    index_insert += info[DEVICE_NAME] + ","
+    index_insert += info[ISA] + ","
+    index_insert += info[CPU] + ","
+    index_insert += info[MEMSIZE] + ","
+    index_insert += info[L1] + ","
+    index_insert += info[L2] + ","
+    index_insert += info[L3] + ","
+    index_insert += info[CORES] + ","
+    index_insert += info[WORKLOAD] + ","
+    index_insert += info[EVENT_GROUP]
+    
+    cursor.execute(index_insert)
+
+def import_file(filename, cursor):
+
+    reader = csv.reader(filename)
+    
+    entries = []
+    for i in range(0,10):
+        entries[i] = []
+        
+    i = 0;
+    while (row = next(reader)):
+        for entry in row[1:]:
+            entries[i].append(entry)
+            i = i + 1
     
     
+    
+    if (info[EVENT_GROUP] = "TopdownL1"):
+        import_topdownl1(filename, cursor)
+    
+        
     
 
 try:
