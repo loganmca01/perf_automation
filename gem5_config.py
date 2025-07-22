@@ -149,7 +149,7 @@ def build_boot_exit_board():
             memory=memory,
             cache_hierarchy=cache_hierarchy
         )
-        workload = obtain_resource("x86-ubuntu-24.04-boot-no-systemd")
+        workload = obtain_resource("x86-ubuntu-24.04-boot-no-systemd", resource_version="3.0.0")
         board.set_workload(workload)
     elif (args.isa == "RISCV"):
         board = RiscvBoard(
@@ -158,7 +158,7 @@ def build_boot_exit_board():
             memory=memory,
             cache_hierarchy=cache_hierarchy,
         )
-        workload = obtain_resource("riscv-ubuntu-24.04-boot-no-systemd")
+        workload = obtain_resource("riscv-ubuntu-24.04-boot-no-systemd", resource_version="1.0.0")
         board.set_workload(workload)
     elif (args.isa == "ARM"):
         board = ArmBoard(
@@ -167,7 +167,7 @@ def build_boot_exit_board():
             memory=memory,
             cache_hierarchy=cache_hierarchy
         )
-        workload = obtain_resource("arm-ubuntu-24.04-boot-no-systemd")
+        workload = obtain_resource("arm-ubuntu-24.04-boot-no-systemd", resource_version="1.0.0")
         board.set_workload(workload)
     else:
         print("error in isa description")

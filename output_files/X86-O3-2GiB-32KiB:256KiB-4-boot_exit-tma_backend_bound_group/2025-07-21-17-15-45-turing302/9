@@ -23,3 +23,31 @@ info: Using default config
 test3
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'sgdt_Ms' unimplemented
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload boot_exit':
+
+ 5,625,341,196,822      INST_RETIRED.ANY                 #      6.5 %  tma_core_bound         
+                                                  #      8.7 %  tma_memory_bound         (31.25%)
+   144,840,146,374      RESOURCE_STALLS.SB                                                      (31.25%)
+   156,190,613,525      CPU_CLK_UNHALTED.REF_XCLK                                               (31.25%)
+ 9,080,055,278,944      IDQ_UOPS_NOT_DELIVERED.CORE                                             (31.25%)
+   582,736,118,822      RS_EVENTS.EMPTY_CYCLES                                                  (31.25%)
+    89,679,425,497      INT_MISC.RECOVERY_CYCLES_ANY                                            (25.00%)
+ 1,265,885,464,412      UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC                                        (25.00%)
+ 2,960,194,651,361      UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC                                        (25.00%)
+ 2,091,619,369,182      UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC                                        (25.00%)
+   156,037,891,567      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (25.00%)
+ 4,673,294,537,345      CPU_CLK_UNHALTED.THREAD                                                 (25.07%)
+ 1,084,280,546,306      CYCLE_ACTIVITY.STALLS_MEM_ANY                                           (25.07%)
+ 5,857,479,430,827      UOPS_RETIRED.RETIRE_SLOTS                                               (25.07%)
+ 1,652,126,026,724      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (25.07%)
+ 1,711,743,225,675      CYCLE_ACTIVITY.STALLS_TOTAL                                             (25.07%)
+ 6,594,471,975,695      UOPS_ISSUED.ANY                                                         (25.00%)
+
+    1655.187024199 seconds time elapsed
+
+    1588.060014000 seconds user
+       1.947855000 seconds sys
+
+
