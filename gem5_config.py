@@ -42,6 +42,10 @@ workload_choices = [
     "dedup",
     "fluidanimate",
     "canneal",
+    "ferret",
+    "freqmine",
+    "raytrace",
+    "swaptions",
 ]
 
 processor = None

@@ -1,0 +1,12 @@
+X86 O3 2GiB 32KiB:256KiB 4 ferret TopdownL1
+X86 O3 2GiB 64KiB:512KiB 4 ferret TopdownL1
+X86 O3 2GiB 128KiB:1024KiB 4 ferret TopdownL1
+X86 O3 2GiB 32KiB:256KiB 4 freqmine TopdownL1
+X86 O3 2GiB 64KiB:512KiB 4 freqmine TopdownL1
+X86 O3 2GiB 128KiB:1024KiB 4 freqmine TopdownL1
+X86 O3 2GiB 32KiB:256KiB 4 raytrace TopdownL1
+X86 O3 2GiB 64KiB:512KiB 4 raytrace TopdownL1
+X86 O3 2GiB 128KiB:1024KiB 4 raytrace TopdownL1
+X86 O3 2GiB 32KiB:256KiB 4 swaptions TopdownL1
+X86 O3 2GiB 64KiB:512KiB 4 swaptions TopdownL1
+X86 O3 2GiB 128KiB:1024KiB 4 swaptions TopdownL1
