@@ -1,0 +1,2 @@
+ARM O3 2GiB 32KiB:256KiB 4 boot_exit TopdownL1
+ARM O3 2GiB 64KiB:512KiB 4 boot_exit TopdownL1

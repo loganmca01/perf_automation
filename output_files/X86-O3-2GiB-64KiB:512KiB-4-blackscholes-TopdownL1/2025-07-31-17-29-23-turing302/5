@@ -1,0 +1,46 @@
+FileLockException: Timeout occured. This is likely due to the existence of the lock file '/home/mcallisl/.cache/gem5/x86-parsec.lock.lock'. If there's no other process the lock file, you can manually delete the lock file and rerun the script.
+
+At:
+  src/python/gem5/utils/filelock.py(88): acquire
+  src/python/gem5/utils/filelock.py(109): __enter__
+  src/python/gem5/resources/downloader.py(250): get_resource
+  src/python/gem5/resources/resource.py(156): get_local_path
+  src/python/gem5/resources/resource.py(202): get_local_path
+  src/python/gem5/components/boards/x86_board.py(366): _add_disk_to_board
+  src/python/gem5/components/boards/kernel_disk_workload.py(221): set_kernel_disk_workload
+  /home/mcallisl/perf_automation/gem5_config.py(206): build_parsec_board
+  /home/mcallisl/perf_automation/gem5_config.py(258): run_sim
+  /home/mcallisl/perf_automation/gem5_config.py(272): <module>
+  src/python/m5/main.py(675): main
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.3
+gem5 compiled Jul 21 2025 18:19:43
+gem5 started Jul 31 2025 17:29:46
+gem5 executing on turing302, pid 188246
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload blackscholes
+
+info: Standard input is not a terminal, disabling listeners.
+info: Using default config
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload blackscholes':
+
+       176,994,645      CPU_CLK_UNHALTED.REF_XCLK        #     44.1 %  tma_frontend_bound     
+                                                  #      8.1 %  tma_bad_speculation    
+                                                  #     20.9 %  tma_retiring           
+                                                  #     26.9 %  tma_backend_bound        (60.92%)
+       142,804,893      IDQ.MS_UOPS                                                             (61.33%)
+     6,842,449,306      IDQ_UOPS_NOT_DELIVERED.CORE                                             (49.62%)
+       157,545,754      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.91%)
+       175,363,292      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (51.74%)
+     3,893,149,757      CPU_CLK_UNHALTED.THREAD                                                 (63.97%)
+     3,234,635,278      UOPS_RETIRED.RETIRE_SLOTS                                               (63.14%)
+     4,174,545,293      UOPS_ISSUED.ANY                                                         (62.35%)
+
+     906.534313940 seconds time elapsed
+
+       1.135645000 seconds user
+       0.889317000 seconds sys
+
+

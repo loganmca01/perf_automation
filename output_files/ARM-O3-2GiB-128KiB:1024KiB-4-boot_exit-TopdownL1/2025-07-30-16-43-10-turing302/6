@@ -1,0 +1,47 @@
+FileLockException: Timeout occured. This is likely due to the existence of the lock file '/home/mcallisl/.cache/gem5/arm-ubuntu-24.04-img.lock.lock'. If there's no other process the lock file, you can manually delete the lock file and rerun the script.
+
+At:
+  src/python/gem5/utils/filelock.py(88): acquire
+  src/python/gem5/utils/filelock.py(109): __enter__
+  src/python/gem5/resources/downloader.py(250): get_resource
+  src/python/gem5/resources/resource.py(156): get_local_path
+  src/python/gem5/resources/resource.py(202): get_local_path
+  src/python/gem5/components/boards/arm_board.py(388): _add_disk_to_board
+  src/python/gem5/components/boards/kernel_disk_workload.py(221): set_kernel_disk_workload
+  src/python/gem5/components/boards/abstract_board.py(257): set_workload
+  /home/mcallisl/perf_automation/gem5_config.py(171): build_boot_exit_board
+  /home/mcallisl/perf_automation/gem5_config.py(248): run_sim
+  /home/mcallisl/perf_automation/gem5_config.py(272): <module>
+  src/python/m5/main.py(675): main
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.3
+gem5 compiled Jul 21 2025 18:19:43
+gem5 started Jul 30 2025 16:43:32
+gem5 executing on turing302, pid 186312
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot_exit
+
+info: Standard input is not a terminal, disabling listeners.
+info: Using default config
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot_exit':
+
+       198,879,174      CPU_CLK_UNHALTED.REF_XCLK        #     36.3 %  tma_frontend_bound     
+                                                  #      6.6 %  tma_bad_speculation    
+                                                  #     25.2 %  tma_retiring           
+                                                  #     31.8 %  tma_backend_bound        (63.68%)
+       182,370,902      IDQ.MS_UOPS                                                             (63.04%)
+     6,880,989,265      IDQ_UOPS_NOT_DELIVERED.CORE                                             (48.86%)
+       157,289,688      INT_MISC.RECOVERY_CYCLES_ANY                                            (48.68%)
+       198,190,724      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (48.85%)
+     4,743,979,031      CPU_CLK_UNHALTED.THREAD                                                 (63.03%)
+     4,778,983,049      UOPS_RETIRED.RETIRE_SLOTS                                               (63.44%)
+     5,717,333,345      UOPS_ISSUED.ANY                                                         (63.44%)
+
+     908.689750996 seconds time elapsed
+
+       1.425091000 seconds user
+       0.816029000 seconds sys
+
+

@@ -1,0 +1,88 @@
+Global frequency set at 1000000000000 ticks per second
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/sim/kernel_workload.cc:46: info: kernel located at: /home/mcallisl/.cache/gem5/arm64-linux-kernel-5.4.49
+src/base/loader/symtab.cc:95: warn: Cannot insert a new symbol table due to name collisions. Adding prefix to each symbol's name can resolve this issue.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/vnc/vncserver.cc:163: warn: Sockets disabled, not accepting vnc client connections
+src/dev/serial/terminal.cc:174: warn: Sockets disabled, not accepting terminal connections
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+src/arch/arm/fs_workload.cc:121: info: Using bootloader at address 0x10
+src/arch/arm/fs_workload.cc:139: info: Using kernel entry physical address at 0x80080000
+src/arch/arm/linux/fs_workload.cc:111: info: Loading DTB file: m5out/device.dtb at address 0x88000000
+src/dev/arm/energy_ctrl.cc:252: warn: Existing EnergyCtrl, but no enabled DVFSHandler found.
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.3
+gem5 compiled Jul 21 2025 18:19:43
+gem5 started Jul 30 2025 17:11:06
+gem5 executing on turing302, pid 186420
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot_exit
+
+info: Standard input is not a terminal, disabling listeners.
+info: Using default config
+test3
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
+src/dev/arm/gic_v3_distributor.cc:884: warn: Gicv3Distributor::write(): setting ARE_NS to 0 is not supported!
+src/dev/arm/gic_v3_distributor.cc:889: warn: Gicv3Distributor::write(): setting ARE_S to 0 is not supported!
+src/dev/arm/rv_ctrl.cc:176: warn: SCReg: Access to unknown device dcc0:site0:pos0:fn7:dev0
+src/mem/ruby/system/RubyPort.cc:264: warn: Cache maintenance operations are not supported in Ruby.
+src/dev/arm/gic_v3_distributor.cc:913: warn: Gicv3Distributor::write(): setting ARE_NS to 0 is not supported!
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'csdb' unimplemented
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x60 that doesn't exist
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x48 that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'csdb' unimplemented
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x8 that doesn't exist
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x48 that doesn't exist
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'csdb' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+first exit event: kernel booted
+2025-07-30-17-52-32
+src/sim/simulate.cc:199: info: Entering event queue @ 321317112582.  Starting simulation...
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'csdb' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
+second exit event: in after boot
+2025-07-30-18-21-45
+src/sim/simulate.cc:199: info: Entering event queue @ 400272664329.  Starting simulation...
+third exit event: after run script
+2025-07-30-18-23-45
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/perf_automation/gem5_config.py --isa ARM --cpu O3 --mem 2GiB --cache 128KiB:1024KiB --cores 4 --workload boot_exit':
+
+   365,025,309,977      CPU_CLK_UNHALTED.REF_XCLK        #     48.5 %  tma_frontend_bound     
+                                                  #      5.8 %  tma_bad_speculation    
+                                                  #     29.3 %  tma_retiring           
+                                                  #     16.4 %  tma_backend_bound        (62.50%)
+   981,475,098,982      IDQ.MS_UOPS                                                             (62.50%)
+21,260,100,746,614      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   245,019,639,663      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   364,735,923,719      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+10,963,356,334,523      CPU_CLK_UNHALTED.THREAD                                                 (62.50%)
+12,834,213,202,362      UOPS_RETIRED.RETIRE_SLOTS                                               (62.50%)
+14,899,316,092,881      UOPS_ISSUED.ANY                                                         (62.50%)
+
+    4362.255826826 seconds time elapsed
+
+    3633.558913000 seconds user
+       2.491550000 seconds sys
+
+
